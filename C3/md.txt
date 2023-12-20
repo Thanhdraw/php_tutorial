@@ -1,0 +1,17 @@
+
+=>mảng 1 chiều 
+$array_1 = [1, 2, 3, 5, 67, 7];
+
+
+$array_1 = [1, 2, 3, 5, 67, 7];
+// print_r($array_1);
+
+// dùng foreach
+foreach ($array_1 as $value) {
+    echo "$value" . "<pre></pre>";
+}
+// dùng for
+for ($i = 0; $i < count($array_1); $i++) {
+    echo "$array_1[$i]" . "<br>";
+    var_dump($array_1[$i]); //tìm thuộc tính giá trị 
+}
