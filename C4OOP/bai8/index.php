@@ -4,6 +4,9 @@ include_once('Circle.php');
 include_once('Cylinder.php');
 include_once('Rectangle.php');
 
+include_once('Triagle.php');
+
+
 
 $circle = new Circle('Circle 01', 3);
 echo 'Circle area: ' . number_format($circle->calculateArea(), 2) . '<br />';
@@ -23,8 +26,10 @@ $rectangle = new Rectangle('Rectangle01', 3, 4);
 echo 'Rectangle area: ' . $rectangle->calculateArea() . '<br />';
 echo 'Rectangle perimeter: ' . $rectangle->calculatePerimeter() . '<br />';
 
-// $square = new Square('Square 01', 4);
-// echo 'Square area: ' . $square->calculateArea() . '<br />';
-// echo 'Square perimeter: ' . $square->calculatePerimeter() . '<br />';
+$triagle = new Triagle('Square 01', 4, 4, 4);
+echo 'Square area: ' . $triagle->getArea() . '<br />';
+echo 'Square perimeter: ' . $triagle->getPerimeter() . '<br />';
+echo 'Square perimeter: ' . $triagle->toString() . '<br />';
+
 
 ?>
