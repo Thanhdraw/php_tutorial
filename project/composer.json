@@ -1,0 +1,10 @@
+{
+    "name": "dangquocthanh/myproject",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Dangquocthanh\\Myproject\\": "src/"
+        }
+    },
+    "require": {}
+}
