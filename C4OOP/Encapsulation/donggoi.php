@@ -32,6 +32,7 @@ class BankAccount
         }
     }
 
+
     public function withdraw(float $outMoney)
     {
         $The_remaining_amount = $this->balance - $outMoney;
