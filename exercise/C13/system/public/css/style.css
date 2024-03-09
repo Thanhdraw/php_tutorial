@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 75%;
+    height: 75%;
+    margin: 60px auto 50px;
+    padding-bottom: 50px;
+    /* Thêm một khoảng cách dưới cùng cho nội dung để tránh bị che phủ bởi footer */
+    background-color: #ccc;
+
+}
+
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    /* Cố định vị trí */
+    top: 0;
+    left: 0;
+    /* Đặt ở trên cùng */
+    width: 100%;
+    /* Chiều rộng toàn bộ */
+}
+
+#main {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#main li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#content {
+    padding: 20px 0;
+
+}
+
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    /* Cố định vị trí */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* Đặt ở dưới cùng */
+    width: 100%;
+    /* Chiều rộng toàn bộ */
+}
+
+
+/* File css => contact  */
+
+.container {
+    width: 90%;
+
+    /* Chiều cao là 100% của viewport height */
+    margin: 0 auto;
+    /* Căn giữa theo chiều ngang */
+    display: flex;
+    flex-direction: column;
+    /* Căn giữa theo chiều ngang */
+    justify-content: center;
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+label,
+input,
+textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

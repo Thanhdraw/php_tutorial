@@ -1,0 +1,54 @@
+.form-group {
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+/* style.css */
+
+/* Style for images */
+.img-container {
+    width: 100%; /* Adjust the width as needed */
+}
+
+.img-container img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper spacing */
+    margin: 0 auto; /* Center the image horizontally */
+    margin-bottom: 10px; /* Add some space below each image */
+}
+
+
+.form-group p {
+    margin-right: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+
+
+}
+.img{
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.delete {
+    margin-left: 20px;
+}
+
+.row > .col-2,
+.row > .col-6,
+.row > .col-2 {
+    width: 100%;
+    flex-direction: column;
+
+}

@@ -1,0 +1,9 @@
+form input {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+form p{
+    color: red;
+}

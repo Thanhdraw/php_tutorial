@@ -1,0 +1,27 @@
+//    $pattern = '(\S+(\.(?i)(jpe?g|png|gif|bmp))$)';
+//    if (!preg_match($pattern, $file['name'])) {
+//        echo "⚠️ File không hợp lệ ";
+//        echo "<a href=\"../index.php\">Back</a>";
+//        exit();
+//    } else {
+//        $upload_file = $upload_path . $file['name'];
+//        echo "File nội chọn: {$file['name']}";
+//        if (check_duplicate($upload_path . $file["name"])) {
+//            echo "<br>File đã tồn tại<br>"; // In ra thông báo nếu tập tin đã tồn tại
+//            $file['name'] = rename_file_exit($file['name'], $upload_path); // Đổi tên tệp nếu đã tồn tại
+//            echo "==File đổi tên: {$file['name']}==<br>";
+//            move_uploaded_file($file['tmp_name'], $upload_path . $file['name']);
+//            echo "✅ File đã đổi tên và được tải lên thành công || {$file['name']} <br>";
+//        } else {
+//            move_uploaded_file($file['tmp_name'], $upload_file);
+//            echo "✅ File đã được tải lên thành công || {$file['name']} <br>";
+//        }
+//        echo "<a href=\"../index.php\">Back</a>";
+////        if (move_uploaded_file($file['tmp_name'], $upload_file)) {
+////            echo "✅ File đã được tải lên thành công || {$file['name']} <br>";
+////            echo "<a href=$upload_file> Tải xuống: {$file['name']}</a>";
+////        } else {
+////            echo "Upload Failed :((";
+////        }
+//    }
+//}
