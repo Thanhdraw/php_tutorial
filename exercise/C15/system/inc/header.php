@@ -20,6 +20,7 @@
             <li><a href="?">Trang chủ</a></li>
             <li><a href="?page=contact">Contact</a></li>
             <li><a href="?page=about">about</a></li>
+            <li><a href="?page=add-post">Post</a></li>
             <li><a href="?page=product">Product</a></li>
         </ul>
     </div>
