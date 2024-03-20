@@ -6,48 +6,23 @@
 session_start();
 
 
-$error = [];
-$error_username = false;
-$error_password = false;
 if (isset($_POST['submit'])) {
     if (!empty($_POST['username']) && !empty($_POST['password'])) {
+        $error = [];
         $username = $_POST['username'];
         $password = $_POST['password'];
         if (check_username($username)) {
-            $error_username = true;
             $error["username"] = "Username is not valid";
-
-        } else {
-            $error_username = false;
         }
         if (check_password($password)) {
-            $error_password = true;
-            $error["password"] = "Username is not valid";
 
-        } else {
-            $error_password = false;
+            $error["password"] = "Password is not valid";
+
         }
-    }
-
-    if (!($error_username && $error_password)) {
-        echo "<span style='color: red'  class='error'>Username or Password is not valid</span>";
-        exit();
-    } else {
-
-        $path = "../index.php";
-        header("location: $path");
+        return $error;
 
     }
 
-    if (check_login($username, $password)) {
-        $_SESSION['username'] = $username;
-        echo "Chào mừng " . $username;
-        $path = "../index.php";
-        header("location: $path");
-    }
-
-
-    return $error;
 
 }
 
@@ -105,17 +80,20 @@ function check_login($username, $password): void
     <title>Login</title>
 </head>
 <body>
-<form action="" method="POST" onsubmit="return validateForm()">
+<form action="" method="POST">
     <h3>Login Here</h3>
 
     <label for="username">Username</label>
-    <input type="text" placeholder="Email or Phone" name="username" id="username" required>
+    <input type="text" placeholder="Email or Phone" name="username" id="username">
     <span id="passwordError" class="error" style="display: none;">Username is not valid</span>
-    <?php if ($error_username) {
+    <?php if (isset($error)) {
         echo "<span style='color: red'>" . $error["username"] . "</span>";
     } ?>
     <label for="password">Password</label>
-    <input type="password" placeholder="Password" name="password" id="password" required>
+    <?php if (isset($error)) {
+        echo "<span style='color: red'>" . $error["username"] . "</span>";
+    } ?>
+    <input type="password" placeholder="Password" name="password" id="password">
     <span id="passwordError" class="error" style="display: none;">Password is not valid</span>
     <button name="submit">Log In</button>
     <div class="social">
