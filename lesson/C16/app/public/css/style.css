@@ -29,10 +29,19 @@ body {
 
 .text {
     margin-top: 10px;
-    display: inline;
+    display: flex;
+    align-items: center;
+    justify-content: right-start;
+    color: #fff;
+    margin-left:  20px;
+    list-style-type: none;
+}
+.text p{
+    margin-right: 10px;
+}
+.text a{
     color: #fff;
 }
-
 #main li a {
     color: #fff;
     text-decoration: none;

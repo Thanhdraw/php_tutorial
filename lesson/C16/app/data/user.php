@@ -8,26 +8,34 @@
  * email =>"",
  * */
 
+
+
 $list_users = array(
     1 => array(
         "fullname" => "Nguyen Van A",
         "password" => "123Abc",
-        "email" => "Php@p.com"
+
 
     ),
     2 => array(
         "fullname" => "DangQuocThanh",
-        "password" => "123Abc",
-        "email" => "Thanh@p.com"
+        "password" => "123@Abc",
+
     ),
     3 => array(
-        "fullname" => "Nguyen Van B",
-        "password" => "123Abc",
-        "email" => "java@p.com"
+        "fullname" => "john_doe",
+        "password" => "password",
+
     ),
     4 => array(
         "fullname" => "Unitop",
         "password" => "Admin@123",
-        "email" => "java@p.com"
+
+    ),
+    5 => array(
+        "fullname" => "thanh2812",
+        "password" => "password",
+
     )
 );
+

@@ -3,92 +3,50 @@
 
 //$path = "./pages/home.php";
 //header("location: $path");
-session_start();
 
-
-$error = [];
-$error_username = false;
-$error_password = false;
-if (isset($_POST['submit'])) {
-    if (!empty($_POST['username']) && !empty($_POST['password'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        if (check_username($username)) {
-            $error_username = true;
+if (isset($_POST["submit"])) {
+    $error = [];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    if (!empty($username)) {
+        $pattern_username = "/^[A-Za-z0-9_.]{6,32}$/";
+        if (!preg_match($pattern_username, $username)) {
             $error["username"] = "Username is not valid";
+        }
+    } else {
+        $error["username"] = "Username is required";
+    }
+    if (!empty($password)) {
+        $pattern_password = "/^.{8,}$/";
+        if (!preg_match($pattern_password, $password)) {
+            $error["password"] = "Password is not valid";
+        }
+    } else {
+        $error["password"] = "Password is required";
+    }
+
+
+    if (empty($error)) {
+        if (check_login($username, $password)) {
+            $_SESSION["user_login"] = $username;
+            $_SESSION["is_login"] = true;
+            //Cookie login
+            if (isset($_POST["remember_me"])) {
+                setcookie("user_login", $username, time() + 86400, "/");
+                setcookie("is_login", true, time() + 86400, "/");
+            }
+            $random_token = bin2hex(random_bytes(16));
+            setcookie($username, $random_token, time() + 86400, "/");
+            redirect("?page=home");
 
         } else {
-            $error_username = false;
+            $error["account"] = "Username or Password is not correct";
         }
-        if (check_password($password)) {
-            $error_password = true;
-            $error["password"] = "Username is not valid";
 
-        } else {
-            $error_password = false;
-        }
+//        $path = "./index.php";
+//        header("location: $path");
     }
-
-    if (!($error_username && $error_password)) {
-        echo "<span style='color: red'  class='error'>Username or Password is not valid</span>";
-        exit();
-    } else {
-
-        $path = "../index.php";
-        header("location: $path");
-
-    }
-
-    if (check_login($username, $password)) {
-        $_SESSION['username'] = $username;
-        echo "Chào mừng " . $username;
-        $path = "../index.php";
-        header("location: $path");
-    }
-
-
-    return $error;
-
 }
-
-
-function check_username($data): bool
-{
-    $pattern = "/^(?=(?:\D*\d){0,2}\D*$)[a-zA-Z0-9_]{3,20}$/";
-    if (preg_match($pattern, $data)) {
-        return true;
-    } else {
-        return false;
-    }
-
-}
-
-function check_password($data): bool
-{
-    $pattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/";
-    if (preg_match($pattern, $data)) {
-        return true;
-    } else {
-        return false;
-    }
-
-}
-
-
-function check_login($username, $password): void
-{
-
-//    if ($username == "unitop" && $password == "Admin@123") {
-//        return true;
-//    } else {
-//        return false;
-//    }
-    global $list_users;
-    print_r($list_users);
-
-}
-
-
 ?>
 
 <!doctype html>
@@ -105,19 +63,20 @@ function check_login($username, $password): void
     <title>Login</title>
 </head>
 <body>
-<form action="" method="POST" onsubmit="return validateForm()">
+<form action="" method="POST">
     <h3>Login Here</h3>
-
     <label for="username">Username</label>
-    <input type="text" placeholder="Email or Phone" name="username" id="username" required>
+    <input type="text" placeholder="Email or Phone" name="username" id="username">
     <span id="passwordError" class="error" style="display: none;">Username is not valid</span>
-    <?php if ($error_username) {
-        echo "<span style='color: red'>" . $error["username"] . "</span>";
-    } ?>
+    <span class="error" style="color: #B31312;"><?php echo $error["username"] ?? ""; ?></span>
     <label for="password">Password</label>
-    <input type="password" placeholder="Password" name="password" id="password" required>
+    <input type="password" placeholder="Password" name="password" id="password">
     <span id="passwordError" class="error" style="display: none;">Password is not valid</span>
+    <span class="error" style="color: #B31312;"><?php echo $error["password"] ?? ""; ?></span>
+    <input type="checkbox" name="remember_me" id="remember_me"><label for="remember_me">Remember Me</label>
+    <div class="forgot-pass"><a href="#">Forgot Password?</a></div>
     <button name="submit">Log In</button>
+    <span class="error" style="color: #B31312;"><?php echo $error["account"] ?? ""; ?></span>
     <div class="social">
         <div class="go"><i class="fab fa-google"></i> Google</div>
         <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>

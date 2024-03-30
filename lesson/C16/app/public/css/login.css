@@ -22,7 +22,7 @@ body {
 
 .background {
     width: 430px;
-    height: 520px;
+    height: 550px;
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
@@ -55,8 +55,27 @@ body {
     bottom: -80px;
 }
 
+#remember_me{
+    margin-top: 20px;
+    display: inline-block;
+    width: 25px;
+    height: 15px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+#remember_me + label{
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    height: fit-content;
+
+
+}
+
 form {
-    height: 520px;
+    height: 630px;
     width: 400px;
     background-color: rgba(255, 255, 255, 0.13);
     position: absolute;
@@ -104,8 +123,9 @@ input {
     font-weight: 300;
 
 }
+
 input:focus {
-   border: #308dcd solid 2px;
+    border: #308dcd solid 2px;
 }
 
 
