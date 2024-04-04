@@ -426,7 +426,7 @@ class Request
      * Sets a callable able to create a Request instance.
      *
      * This is mainly useful when you need to override the Request class
-     * to keep BC with an existing system. It should not be used for any
+     * to keep BC with an existing system_advance. It should not be used for any
      * other purpose.
      *
      * @return void

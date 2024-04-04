@@ -15,7 +15,7 @@ if (!empty($_GET["page"])) {
     $page = "home";
 }
 
-$path = "pages/{$page}.php";
+$path = "page/{$page}.php";
 
 file_exists($path) ? require $path : require "inc/404.php";
 

@@ -103,7 +103,7 @@ class UnixPipes extends AbstractPipes
         set_error_handler($this->handleError(...));
         if (($r || $w) && false === stream_select($r, $w, $e, 0, $blocking ? Process::TIMEOUT_PRECISION * 1E6 : 0)) {
             restore_error_handler();
-            // if a system call has been interrupted, forget about it, let's try again
+            // if a system_advance call has been interrupted, forget about it, let's try again
             // otherwise, an error occurred, let's reset pipes
             if (!$this->hasSystemCallBeenInterrupted()) {
                 $this->pipes = [];

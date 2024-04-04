@@ -602,7 +602,7 @@ class CKFinder extends Container implements HttpKernelInterface
      */
     protected function checkRequirements()
     {
-        $errorMessage = 'The PHP installation does not meet the minimum system requirements for CKFinder. %s Please refer to CKFinder documentation for more details.';
+        $errorMessage = 'The PHP installation does not meet the minimum system_advance requirements for CKFinder. %s Please refer to CKFinder documentation for more details.';
 
         if (version_compare(PHP_VERSION, '5.6.0') < 0) {
             throw new CKFinderException(sprintf($errorMessage, 'Your PHP version is too old. CKFinder 3.x requires PHP 5.6+.'), Error::CUSTOM_ERROR);

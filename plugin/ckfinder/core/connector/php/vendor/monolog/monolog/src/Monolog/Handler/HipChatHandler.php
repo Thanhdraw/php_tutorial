@@ -349,7 +349,7 @@ class HipChatHandler extends SocketHandler
      *
      * Note that this might cause false failures in the specific case of using
      * a valid name with less than 16 characters, but 16 or more bytes, on a
-     * system where `mb_strlen()` is unavailable.
+     * system_advance where `mb_strlen()` is unavailable.
      *
      * @param string $str
      * @param int    $length

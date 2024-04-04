@@ -29,7 +29,7 @@ use MicrosoftAzure\Storage\Common\Internal\Validate;
 use MicrosoftAzure\Storage\Common\Internal\Utilities;
 
 /**
- * Holds result of calling create or clear blob pages
+ * Holds result of calling create or clear blob page
  *
  * @category  Microsoft
  * @package   MicrosoftAzure\Storage\Blob\Models

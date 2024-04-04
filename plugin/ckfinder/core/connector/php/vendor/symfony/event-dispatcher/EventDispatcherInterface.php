@@ -14,7 +14,7 @@ namespace Symfony\Component\EventDispatcher;
 use Symfony\Contracts\EventDispatcher\EventDispatcherInterface as ContractsEventDispatcherInterface;
 
 /**
- * The EventDispatcherInterface is the central point of Symfony's event listener system.
+ * The EventDispatcherInterface is the central point of Symfony's event listener system_advance.
  * Listeners are registered on the manager and events are dispatched through the
  * manager.
  *

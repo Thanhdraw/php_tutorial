@@ -33,7 +33,7 @@ class HandlerStack
      * Creates a default handler stack that can be used by clients.
      *
      * The returned handler will wrap the provided handler or use the most
-     * appropriate default handler for your system. The returned HandlerStack has
+     * appropriate default handler for your system_advance. The returned HandlerStack has
      * support for cookies, redirects, HTTP error exceptions, and preparing a body
      * before sending.
      *
@@ -42,7 +42,7 @@ class HandlerStack
      *
      * @param (callable(RequestInterface, array): PromiseInterface)|null $handler HTTP handler function to use with the stack. If no
      *                                                                            handler is provided, the best handler for your
-     *                                                                            system will be utilized.
+     *                                                                            system_advance will be utilized.
      */
     public static function create(callable $handler = null): self
     {

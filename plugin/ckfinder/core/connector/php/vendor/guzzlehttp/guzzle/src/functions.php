@@ -50,7 +50,7 @@ function debug_resource($value = null)
  *
  * The returned handler is not wrapped by any default middlewares.
  *
- * @return callable(\Psr\Http\Message\RequestInterface, array): \GuzzleHttp\Promise\PromiseInterface Returns the best handler for the given system.
+ * @return callable(\Psr\Http\Message\RequestInterface, array): \GuzzleHttp\Promise\PromiseInterface Returns the best handler for the given system_advance.
  *
  * @throws \RuntimeException if no viable Handler is available.
  *
@@ -72,7 +72,7 @@ function default_user_agent(): string
 }
 
 /**
- * Returns the default cacert bundle for the current system.
+ * Returns the default cacert bundle for the current system_advance.
  *
  * First, the openssl.cafile and curl.cainfo php.ini settings are checked.
  * If those settings are not configured, then the common locations for

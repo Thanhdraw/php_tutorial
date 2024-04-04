@@ -25,7 +25,7 @@
 namespace MicrosoftAzure\Storage\Blob\Models;
 
 /**
- * Optional parameters for create and clear blob pages
+ * Optional parameters for create and clear blob page
  *
  * @category  Microsoft
  * @package   MicrosoftAzure\Storage\Blob\Models

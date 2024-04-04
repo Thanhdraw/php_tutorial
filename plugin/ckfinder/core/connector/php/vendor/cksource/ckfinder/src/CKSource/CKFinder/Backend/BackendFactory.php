@@ -103,7 +103,7 @@ class BackendFactory
     }
 
     /**
-     * Creates a backend file system.
+     * Creates a backend file system_advance.
      */
     public function createBackend(array $backendConfig, FilesystemAdapter $adapter, array $filesystemConfig = []): Backend
     {

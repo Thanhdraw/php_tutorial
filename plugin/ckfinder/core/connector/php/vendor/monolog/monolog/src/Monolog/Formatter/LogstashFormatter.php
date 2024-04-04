@@ -25,7 +25,7 @@ class LogstashFormatter extends NormalizerFormatter
     const V1 = 1;
 
     /**
-     * @var string the name of the system for the Logstash log message, used to fill the @source field
+     * @var string the name of the system_advance for the Logstash log message, used to fill the @source field
      */
     protected $systemName;
 
@@ -51,7 +51,7 @@ class LogstashFormatter extends NormalizerFormatter
 
     /**
      * @param string $applicationName the application that sends the data, used as the "type" field of logstash
-     * @param string $systemName      the system/machine name, used as the "source" field of logstash, defaults to the hostname of the machine
+     * @param string $systemName      the system_advance/machine name, used as the "source" field of logstash, defaults to the hostname of the machine
      * @param string $extraPrefix     prefix for extra keys inside logstash "fields"
      * @param string $contextPrefix   prefix for context keys inside logstash "fields", defaults to ctxt_
      * @param int    $version         the logstash format version to use, defaults to 0

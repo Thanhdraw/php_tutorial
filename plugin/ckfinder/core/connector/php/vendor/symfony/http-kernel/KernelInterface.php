@@ -16,7 +16,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 
 /**
- * The Kernel is the heart of the Symfony system.
+ * The Kernel is the heart of the Symfony system_advance.
  *
  * It manages an environment made of application kernel and bundles.
  *

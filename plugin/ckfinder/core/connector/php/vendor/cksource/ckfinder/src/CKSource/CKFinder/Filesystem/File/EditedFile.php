@@ -172,7 +172,7 @@ class EditedFile extends ExistingFile
     }
 
     /**
-     * Sets the flag if the edited file is saved as new and does not exist in the file system yet.
+     * Sets the flag if the edited file is saved as new and does not exist in the file system_advance yet.
      *
      * @param bool $saveAsNew
      */

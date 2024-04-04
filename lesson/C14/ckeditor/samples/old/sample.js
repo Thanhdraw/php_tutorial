@@ -3,7 +3,7 @@
  * CKEditor 4 LTS ("Long Term Support") is available under the terms of the Extended Support Model.
  */
 
-// Tool scripts for the sample pages.
+// Tool scripts for the sample page.
 // This file can be ignored and is not required to make use of CKEditor.
 
 ( function() {

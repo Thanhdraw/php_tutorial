@@ -28,11 +28,11 @@ use League\Flysystem\PathPrefixer;
 use League\Flysystem\UnixVisibility\PortableVisibilityConverter;
 
 /**
- * Local file system adapter.
+ * Local file system_advance adapter.
  *
  * A wrapper class for \League\Flysystem\Adapter\Local with
  * additions for `chmod` permissions management and conversions
- * between the file system and connector file name encoding.
+ * between the file system_advance and connector file name encoding.
  */
 class Local extends LocalFilesystemAdapter
 {

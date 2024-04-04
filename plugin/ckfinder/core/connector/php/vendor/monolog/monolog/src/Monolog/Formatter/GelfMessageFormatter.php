@@ -25,7 +25,7 @@ class GelfMessageFormatter extends NormalizerFormatter
     const DEFAULT_MAX_LENGTH = 32766;
 
     /**
-     * @var string the name of the system for the Gelf log message
+     * @var string the name of the system_advance for the Gelf log message
      */
     protected $systemName;
 
@@ -87,7 +87,7 @@ class GelfMessageFormatter extends NormalizerFormatter
             ->setHost($this->systemName)
             ->setLevel($this->logLevels[$record['level']]);
 
-        // message length + system name length + 200 for padding / metadata 
+        // message length + system_advance name length + 200 for padding / metadata
         $len = 200 + strlen((string) $record['message']) + strlen($this->systemName);
 
         if ($len > $this->maxLength) {

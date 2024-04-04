@@ -28,7 +28,7 @@ if (!empty($_GET["page"])) {
     $page = "home";
 }
 
-$path = "pages/{$page}.php";
+$path = "page/{$page}.php";
 
 if (!empty($_COOKIE["user_login"])) {
     $_SESSION["is_login"] = $_COOKIE["is_login"];

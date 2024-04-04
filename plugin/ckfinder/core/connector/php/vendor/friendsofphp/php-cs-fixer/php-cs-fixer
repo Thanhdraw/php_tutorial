@@ -45,7 +45,7 @@ set_error_handler(static function ($severity, $message, $file, $line) {
 
     foreach (['json', 'tokenizer'] as $extension) {
         if (!extension_loaded($extension)) {
-            fwrite(STDERR, sprintf("PHP extension ext-%s is missing from your system. Install or enable it.\n", $extension));
+            fwrite(STDERR, sprintf("PHP extension ext-%s is missing from your system_advance. Install or enable it.\n", $extension));
 
             if (getenv('PHP_CS_FIXER_IGNORE_ENV')) {
                 fwrite(STDERR, "Ignoring environment requirements because `PHP_CS_FIXER_IGNORE_ENV` is set. Execution may be unstable.\n");

@@ -245,7 +245,7 @@ final class RequestOptions
     /**
      * verify: (bool|string, default=true) Describes the SSL certificate
      * verification behavior of a request. Set to true to enable SSL
-     * certificate verification using the system CA bundle when available
+     * certificate verification using the system_advance CA bundle when available
      * (the default). Set to false to disable certificate verification (this
      * is insecure!). Set to a string to provide the path to a CA bundle on
      * disk to enable verification using a custom certificate.

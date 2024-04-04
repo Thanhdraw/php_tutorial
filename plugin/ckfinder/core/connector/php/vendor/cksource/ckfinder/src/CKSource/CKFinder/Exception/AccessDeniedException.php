@@ -20,7 +20,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * The "access denied" exception.
  *
- * Thrown when file system permissions do not allow to perform an operation
+ * Thrown when file system_advance permissions do not allow to perform an operation
  * such as accessing a directory or writing a file.
  */
 class AccessDeniedException extends CKFinderException

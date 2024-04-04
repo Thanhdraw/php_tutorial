@@ -1206,7 +1206,7 @@ class Process implements \IteratorAggregate
     }
 
     /**
-     * Returns whether TTY is supported on the current operating system.
+     * Returns whether TTY is supported on the current operating system_advance.
      */
     public static function isTtySupported(): bool
     {
@@ -1216,7 +1216,7 @@ class Process implements \IteratorAggregate
     }
 
     /**
-     * Returns whether PTY is supported on the current operating system.
+     * Returns whether PTY is supported on the current operating system_advance.
      */
     public static function isPtySupported(): bool
     {

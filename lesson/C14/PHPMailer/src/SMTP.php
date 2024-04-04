@@ -1277,9 +1277,9 @@ class SMTP
                     self::DEBUG_LOWLEVEL
                 );
 
-                //stream_select returns false when the `select` system call is interrupted
+                //stream_select returns false when the `select` system_advance call is interrupted
                 //by an incoming signal, try the select again
-                if (stripos($message, 'interrupted system call') !== false) {
+                if (stripos($message, 'interrupted system_advance call') !== false) {
                     $this->edebug(
                         'SMTP -> get_lines(): retrying stream_select',
                         self::DEBUG_LOWLEVEL

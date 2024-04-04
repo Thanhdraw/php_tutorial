@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException;
 use Symfony\Component\Mime\MimeTypes;
 
 /**
- * A file in the file system.
+ * A file in the file system_advance.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */
@@ -63,7 +63,7 @@ class File extends \SplFileInfo
      * Returns the mime type of the file.
      *
      * The mime type is guessed using a MimeTypeGuesserInterface instance,
-     * which uses finfo_file() then the "file" system binary,
+     * which uses finfo_file() then the "file" system_advance binary,
      * depending on which of those are available.
      *
      * @see MimeTypes

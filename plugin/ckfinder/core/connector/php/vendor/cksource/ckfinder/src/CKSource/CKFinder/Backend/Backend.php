@@ -30,7 +30,7 @@ use League\Flysystem\FilesystemException;
 use League\Flysystem\Ftp\FtpAdapter;
 
 /**
- * The Backend file system class.
+ * The Backend file system_advance class.
  *
  * A wrapper class for League\Flysystem\Filesystem with
  * CKFinder customizations.

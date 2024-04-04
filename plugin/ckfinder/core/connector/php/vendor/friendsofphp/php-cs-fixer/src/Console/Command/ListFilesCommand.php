@@ -79,7 +79,7 @@ final class ListFilesCommand extends Command
         foreach ($finder as $file) {
             if ($file->isFile()) {
                 $relativePath = './'.Path::makeRelative($file->getRealPath(), $cwd);
-                // unify directory separators across operating system
+                // unify directory separators across operating system_advance
                 $relativePath = str_replace('/', \DIRECTORY_SEPARATOR, $relativePath);
 
                 $output->writeln(escapeshellarg($relativePath));

@@ -120,7 +120,7 @@ class NewRelicHandler extends AbstractProcessingHandler
     }
 
     /**
-     * Checks whether the NewRelic extension is enabled in the system.
+     * Checks whether the NewRelic extension is enabled in the system_advance.
      *
      * @return bool
      */

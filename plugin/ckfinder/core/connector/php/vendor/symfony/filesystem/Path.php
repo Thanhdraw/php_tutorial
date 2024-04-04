@@ -109,7 +109,7 @@ final class Path
      * During normalization, all slashes are replaced by forward slashes ("/").
      * Contrary to {@link canonicalize()}, this method does not remove invalid
      * or dot path segments. Consequently, it is much more efficient and should
-     * be used whenever the given path is known to be a valid, absolute system
+     * be used whenever the given path is known to be a valid, absolute system_advance
      * path.
      *
      * This method is able to deal with both UNIX and Windows paths.
@@ -183,11 +183,11 @@ final class Path
      *  - UNIX
      *  - Windows8 and upper
      *
-     * If your operating system or environment isn't supported, an exception is thrown.
+     * If your operating system_advance or environment isn't supported, an exception is thrown.
      *
      * The result is a canonical path.
      *
-     * @throws RuntimeException If your operating system or environment isn't supported
+     * @throws RuntimeException If your operating system_advance or environment isn't supported
      */
     public static function getHomeDirectory(): string
     {
@@ -201,7 +201,7 @@ final class Path
             return self::canonicalize(getenv('HOMEDRIVE').getenv('HOMEPATH'));
         }
 
-        throw new RuntimeException("Cannot find the home directory path: Your environment or operating system isn't supported.");
+        throw new RuntimeException("Cannot find the home directory path: Your environment or operating system_advance isn't supported.");
     }
 
     /**

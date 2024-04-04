@@ -7,7 +7,7 @@ namespace JmesPath;
  * The runtime utilized by the Env class can be customized via environment
  * variables. If the JP_PHP_COMPILE environment variable is specified, then the
  * CompilerRuntime will be utilized. If set to "on", JMESPath expressions will
- * be cached to the system's temp directory. Set the environment variable to
+ * be cached to the system_advance's temp directory. Set the environment variable to
  * a string to cache expressions to a specific directory.
  */
 final class Env
@@ -35,7 +35,7 @@ final class Env
 
     /**
      * Creates a JMESPath runtime based on environment variables and extensions
-     * available on a system.
+     * available on a system_advance.
      *
      * @return callable
      */

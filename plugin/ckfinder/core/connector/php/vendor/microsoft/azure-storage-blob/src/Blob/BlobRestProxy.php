@@ -729,7 +729,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
     }
 
     /**
-     * Creates promise that does actual work for create and clear blob pages.
+     * Creates promise that does actual work for create and clear blob page.
      *
      * @param string                 $action    Either clear or create.
      * @param string                 $container The container name.
@@ -2176,7 +2176,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
 
 
     /**
-     * This method upload the page blob pages. This method will send the request
+     * This method upload the page blob page. This method will send the request
      * concurrently for better performance.
      *
      * @param  string                   $container  Name of the container
@@ -2302,7 +2302,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
     }
 
     /**
-     * Clears a range of pages from the blob.
+     * Clears a range of page from the blob.
      *
      * @param string                        $container name of the container
      * @param string                        $blob      name of the blob
@@ -2332,7 +2332,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
     }
 
     /**
-     * Creates promise to clear a range of pages from the blob.
+     * Creates promise to clear a range of page from the blob.
      *
      * @param string                        $container name of the container
      * @param string                        $blob      name of the blob
@@ -2364,7 +2364,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
     }
 
     /**
-     * Creates a range of pages to a page blob.
+     * Creates a range of page to a page blob.
      *
      * @param string                          $container name of the container
      * @param string                          $blob      name of the blob
@@ -2396,7 +2396,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
     }
 
     /**
-     * Creates promise to create a range of pages to a page blob.
+     * Creates promise to create a range of page to a page blob.
      *
      * @param string                          $container name of the container
      * @param string                          $blob      name of the blob
@@ -3285,7 +3285,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
      * Creates promise to return a list of page ranges.
 
      * If `previousSnapshotTime` is specified, the response will include
-     * only the pages that differ between the target snapshot or blob and
+     * only the page that differ between the target snapshot or blob and
      * the previous snapshot.
      *
      * @param string                           $container             name of the container
@@ -3384,7 +3384,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
     }
 
     /**
-     * Sets system properties defined for a blob.
+     * Sets system_advance properties defined for a blob.
      *
      * @param string                          $container name of the container
      * @param string                          $blob      name of the blob
@@ -3407,7 +3407,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
     }
 
     /**
-     * Creates promise to set system properties defined for a blob.
+     * Creates promise to set system_advance properties defined for a blob.
      *
      * @param string                          $container name of the container
      * @param string                          $blob      name of the blob
@@ -3689,7 +3689,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
     }
 
     /**
-     * Reads or downloads a blob from the system, including its metadata and
+     * Reads or downloads a blob from the system_advance, including its metadata and
      * properties.
      *
      * @param string                $container name of the container
@@ -3709,7 +3709,7 @@ class BlobRestProxy extends ServiceRestProxy implements IBlob
     }
 
     /**
-     * Creates promise to read or download a blob from the system, including its
+     * Creates promise to read or download a blob from the system_advance, including its
      * metadata and properties.
      *
      * @param string                $container name of the container

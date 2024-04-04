@@ -58,7 +58,7 @@ interface SessionInterface
      * session and deletes the old session from persistence.
      *
      * @param int|null $lifetime Sets the cookie lifetime for the session cookie. A null value
-     *                           will leave the system settings unchanged, 0 sets the cookie
+     *                           will leave the system_advance settings unchanged, 0 sets the cookie
      *                           to expire with browser session. Time is in seconds, and is
      *                           not a Unix timestamp.
      */
@@ -70,7 +70,7 @@ interface SessionInterface
      *
      * @param bool     $destroy  Whether to delete the old session or leave it to garbage collection
      * @param int|null $lifetime Sets the cookie lifetime for the session cookie. A null value
-     *                           will leave the system settings unchanged, 0 sets the cookie
+     *                           will leave the system_advance settings unchanged, 0 sets the cookie
      *                           to expire with browser session. Time is in seconds, and is
      *                           not a Unix timestamp.
      */

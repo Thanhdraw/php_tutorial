@@ -48,7 +48,7 @@ class InlineFragmentRenderer extends RoutableFragmentRenderer
             $reference = $uri;
 
             // Remove attributes from the generated URI because if not, the Symfony
-            // routing system will use them to populate the Request attributes. We don't
+            // routing system_advance will use them to populate the Request attributes. We don't
             // want that as we want to preserve objects (so we manually set Request attributes
             // below instead)
             $attributes = $reference->attributes;

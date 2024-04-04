@@ -1,7 +1,7 @@
 <?php
 
 
-//$path = "./pages/home.php";
+//$path = "./page/home.php";
 //header("location: $path");
 
 if (isset($_POST["submit"])) {

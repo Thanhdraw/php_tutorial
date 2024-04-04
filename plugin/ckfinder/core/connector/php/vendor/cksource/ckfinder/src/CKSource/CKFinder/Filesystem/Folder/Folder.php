@@ -21,7 +21,7 @@ use CKSource\CKFinder\ResourceType\ResourceType;
 /**
  * The Folder class.
  *
- * Represents a folder in the file system.
+ * Represents a folder in the file system_advance.
  */
 class Folder
 {

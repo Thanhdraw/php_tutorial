@@ -9,7 +9,7 @@ require "inc/header.php";
 <?php
 // $page = $_GET["page"];
 $page = !empty($_GET["page"]) ? $_GET["page"] : "home";
-$path = "pages/{$page}.php";
+$path = "page/{$page}.php";
 
 // echo $path;
 

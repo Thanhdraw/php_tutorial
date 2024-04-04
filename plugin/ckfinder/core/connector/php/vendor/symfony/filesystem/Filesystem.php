@@ -16,7 +16,7 @@ use Symfony\Component\Filesystem\Exception\InvalidArgumentException;
 use Symfony\Component\Filesystem\Exception\IOException;
 
 /**
- * Provides basic utility to manipulate the file system.
+ * Provides basic utility to manipulate the file system_advance.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
@@ -124,8 +124,8 @@ class Filesystem
     /**
      * Sets access and modification time of file.
      *
-     * @param int|null $time  The touch time as a Unix timestamp, if not supplied the current system time is used
-     * @param int|null $atime The access time as a Unix timestamp, if not supplied the current system time is used
+     * @param int|null $time  The touch time as a Unix timestamp, if not supplied the current system_advance time is used
+     * @param int|null $atime The access time as a Unix timestamp, if not supplied the current system_advance time is used
      *
      * @return void
      *

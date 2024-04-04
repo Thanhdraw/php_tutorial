@@ -57,7 +57,7 @@ class ConnectionStringSource
     }
 
     /**
-     * Gets a connection string value from the system environment.
+     * Gets a connection string value from the system_advance environment.
      *
      * @param string $key The connection string name.
      *
