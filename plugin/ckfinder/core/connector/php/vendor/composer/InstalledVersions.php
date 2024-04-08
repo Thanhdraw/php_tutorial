@@ -292,7 +292,7 @@ class InstalledVersions
      *
      * This is only useful for complex integrations in which a project needs to use
      * this class but then also needs to execute another project's autoloader in process,
-     * and wants to ensure both projects have access to their version of installed.php.
+     * and wants to ensure both projects1 have access to their version of installed.php.
      *
      * A typical case would be PHPUnit, where it would need to make sure it reads all
      * the data it needs from this class, then call reload() with

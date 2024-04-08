@@ -4,7 +4,7 @@
  * Slovene PHPMailer language file: refer to English translation for definitive list
  * @package PHPMailer
  * @author Klemen Tušar <techouse@gmail.com>
- * @author Filip Š <projects@filips.si>
+ * @author Filip Š <projects1@filips.si>
  * @author Blaž Oražem <blaz@orazem.si>
  */
 
