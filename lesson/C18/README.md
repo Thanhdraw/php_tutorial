@@ -54,3 +54,9 @@ III. Nâng cấp chức năng:
     1. Chọn một một
     2. Chọn nhưng một một
     3. Chọn nhưng một một
+
+
+
+
+IV:Xay dung chuc nang gio hàng 
+1. hiển thị thông tin sản phẩm khi nhấn vào nút "Them gio hannng";
