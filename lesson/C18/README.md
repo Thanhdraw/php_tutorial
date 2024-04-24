@@ -43,7 +43,7 @@ I. Hệ thống:
 II. Người dùng:
 
     1. Thêm sản phẩm vào giỏ hàng
-    2. Hiển thị thông tin sản phẩm
+    2. Hiển thị thông tin sản    
     3. Chỉnh sữa số lượng sản phẩm trong giỏ hàng
     4. CRUD sản phẩm
     5. Xoá đơn hàng
@@ -55,8 +55,14 @@ III. Nâng cấp chức năng:
     2. Chọn nhưng một một
     3. Chọn nhưng một một
 
+IV:Xay dung chuc nang gio hàng
 
-
-
-IV:Xay dung chuc nang gio hàng 
-1. hiển thị thông tin sản phẩm khi nhấn vào nút "Them gio hannng";
+1. hiển thị thông tin sản phẩm khi nhấn vào nút "Them gio hannng";✅
+2. Thông tin lưu trữ:
+   1. Thông tin sản phẩm
+   2. product_code - ten - price - image - quantity - total
+   3. Dùng Session luu tru phien giao dich
+3. Tôổng đơn hàng
+   - tong tie
+   - so luong san pham
+   - tien thanh toan

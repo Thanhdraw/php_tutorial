@@ -21,13 +21,13 @@ $list_ipad = get_list_product_by_cat($ipad['id']);
                         <?php if (!empty($list_iphone)): ?>
                             <?php foreach ($list_iphone as $item): ?>
                                 <li>
-                                    <a href="?page=product&action=detail<?php echo $item['product_code']; ?>" title=""
+                                    <a href="<?php echo $item['url']; ?>" title=""
                                        class="thumb">
                                         <img src="<?php echo $item['image']; ?>" alt="">
                                     </a>
                                     <a href="?page=detail_product" title=""
                                        class="title"><?php echo $item['product_name']; ?></a>
-                                    <p class="price"><?php echo number_format($item['price'] * 1000000, 0, ',', '.') . " VNĐ"; ?></p>
+                                    <p class="price"><?php echo number_format($item['price'], 0, ',', '.') . " VNĐ"; ?></p>
                                 </li>
                             <?php endforeach; ?>
                         <?php else: ?>
@@ -45,12 +45,12 @@ $list_ipad = get_list_product_by_cat($ipad['id']);
                         <?php if (!empty($list_macbook)): ?>
                             <?php foreach ($list_macbook as $item): ?>
                                 <li>
-                                    <a href="?page=detail_product" title="" class="thumb">
+                                    <a href="<?php echo $item['url']; ?>" title="" class="thumb">
                                         <img src="<?php echo $item['image']; ?>" alt="">
                                     </a>
-                                    <a href="?page=detail_product" title=""
+                                    <a href="<?php echo $item['url']; ?>" title=""
                                        class="title"><?php echo $item['product_name']; ?></a>
-                                    <p class="price"><?php echo number_format($item['price'] * 1000000, 0, ',', '.') . " VNĐ"; ?></p>
+                                    <p class="price"><?php echo number_format($item['price'], 0, ',', '.') . " VNĐ"; ?></p>
                                 </li>
                             <?php endforeach; ?>
                         <?php else: ?>
@@ -68,10 +68,10 @@ $list_ipad = get_list_product_by_cat($ipad['id']);
                         <?php if (!empty($list_ipad)): ?>
                             <?php foreach ($list_ipad as $item): ?>
                                 <li>
-                                    <a href="?page=detail_product" title="" class="thumb">
+                                    <a href="<?php echo $item['url']; ?>" title="" class="thumb">
                                         <img src="<?php echo $item['image']; ?>" alt="">
                                     </a>
-                                    <a href="?page=detail_product" title=""
+                                    <a href="<?php echo $item['url']; ?>" title=""
                                        class="title"><?php echo $item['product_name']; ?></a>
                                     <p class="price"><?php echo number_format($item['price'] * 1000000, 0, ',', '.') . " VNĐ"; ?></p>
                                 </li>

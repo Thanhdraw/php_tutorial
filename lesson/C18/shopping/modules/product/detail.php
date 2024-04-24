@@ -1,7 +1,8 @@
 <?php
 
 
-$id = !empty($_GET["id"]) ? $_GET["id"] : 0;
+$id = !empty($_GET["id"]) ? $_GET["id"] : '';
+
 $item_code = get_product_by_code($id);
 $type = gettype($item_code);
 
@@ -20,7 +21,7 @@ $type = gettype($item_code);
                     </div>
                     <div class="detail fl-right">
                         <h3 class="title"><?php echo $item_code["product_name"]; ?></h3>
-                        <p class="price"><?php echo number_format($item_code['price'] * 1000000, 0, ',', '.') . " VNĐ"; ?></p>
+                        <p class="price"><?php echo number_format($item_code['price'], 0, ',', '.') . " VNĐ"; ?></p>
                         <p class="product-code">Mã sản phẩm: <span><?php echo $item_code['product_code']; ?></span></p>
                         <div class="desc-short">
                             <h5>Mô tả sản phẩm:</h5>
@@ -29,7 +30,7 @@ $type = gettype($item_code);
                         <div class="num-order-wp">
                             <span>Số lượng:</span>
                             <input type="text" id="num-order" name="num-order" value="1">
-                            <a href="?mod=cart&action=add&id=<?php echo $item_code['product_code']; ?>" title=""
+                            <a href="<?php echo $item_code['url']; ?>" title=""
                                class="add-to-cart">Thêm giỏ hàng</a>
                         </div>
 

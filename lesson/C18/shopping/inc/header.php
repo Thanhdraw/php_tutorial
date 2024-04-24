@@ -25,7 +25,13 @@
                 <div id="cart-wp" class="fl-right">
                     <a href="?mod=cart&action=show" title="" id="btn-cart">
                         <span id="icon"><img src="public/images/icon-cart.png" alt=""></span>
-                        <span id="num">5</span>
+                        <?php
+                        $num_order = $_SESSION['cart']['info']['total_quantity'] ?? 0;
+                        if ($num_order > 0): ?>
+                            <span id="num"><?php echo $num_order; ?></span>
+                        <?php else : ?>
+                            <span id="num"><?php echo $num_order; ?></span>
+                        <?php endif; ?>
                     </a>
                 </div>
             </div>

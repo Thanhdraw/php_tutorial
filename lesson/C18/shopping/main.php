@@ -1,4 +1,6 @@
 <?php
+session_start();
+ob_start();
 
 require "data/pages.php";
 require "data/product.php";
@@ -9,7 +11,7 @@ require "lib/pages.php";
 require "lib/product.php";
 require "lib/show_arr.php";
 require_once "lib/product.php";
-
+require "lib/url.php";
 
 get_header();
 
