@@ -10,7 +10,7 @@ if (isset($_FILES['file'])) {
     $pattern = '([^\s]+(\.(?i)(jpe?g|png|gif|bmp))$)';
     if (!preg_match($pattern, $file['name'])) {
         echo "⚠️ File không hợp lệ ";
-        echo "<a href=\"../index.php\">Back</a>";
+        echo "<a href=\"../main.php\">Back</a>";
         exit();
     } else {
         $upload_file = $upload_path . $file['name'];
@@ -25,7 +25,7 @@ if (isset($_FILES['file'])) {
             move_uploaded_file($file['tmp_name'], $upload_file);
             echo "✅ File đã được tải lên thành công || {$file['name']} <br>";
         }
-        echo "<a href=\"../index.php\">Back</a>";
+        echo "<a href=\"../main.php\">Back</a>";
 //        if (move_uploaded_file($file['tmp_name'], $upload_file)) {
 //            echo "✅ File đã được tải lên thành công || {$file['name']} <br>";
 //            echo "<a href=$upload_file> Tải xuống: {$file['name']}</a>";

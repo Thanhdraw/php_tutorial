@@ -32,14 +32,14 @@ if (isset($_REQUEST['uploadFile'])) {
         //First, lower case file extension, and check file extension in $allowed_extensions
         if (!in_array(strtolower($file_extension), $allowed_extensions)) {
             echo "⚠️ File not valid || ";
-            echo "<a href=\"../index.php\">Back</a>";
+            echo "<a href=\"../main.php\">Back</a>";
             exit();
         }
 
         //Second, check file size allow in MAX_FILE_SIZE
         if ($file['size'] > MAX_FILE_SIZE) {
             echo "⚠️ File too large";
-            echo "<a href=\"../index.php\">Back</a>";
+            echo "<a href=\"../main.php\">Back</a>";
             exit();
         }
 
@@ -57,7 +57,7 @@ if (isset($_REQUEST['uploadFile'])) {
         if (move_uploaded_file($file['tmp_name'], $upload_path . $file_name)) {
             echo "✅ File đã được tải lên thành công || {$file_name} <br>";
             echo "<a href=$upload_file> Tải xuống: {$file_name}</a> || ";
-            echo "<a href=\"../index.php\">Back</a>";
+            echo "<a href=\"../main.php\">Back</a>";
         } else {
             echo "Upload Failed :((";
         }

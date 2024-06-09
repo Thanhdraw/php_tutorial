@@ -1,17 +1,12 @@
 <?php
-$action = !empty($_GET["action"]) ? $_GET["action"] : "main";
+if (isset($_POST['btn_update_cart'])) {
+    update_cart($_POST['qty']);
+    redirect("?mod=cart&action=show");
+
+    show_arr($_POST);
+}
 
 
-/*
- * tru tong so tien va so luong cua cart
- *
- * */
-
-show_arr(update_cart());
-show_arr($_SESSION['cart']['info']);
-
-
-//show_arr(update_cart());
 
 
 ?>

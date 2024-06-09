@@ -81,11 +81,11 @@ function get_price_quantity_Cart()
 
 }
 
-function update_cart()
+function update_info_cart()
 {
 
 
-    return $_SESSION['cart']['buy'];
+    return $_SESSION['cart']['info'] = get_price_quantity_Cart();
 
 }
 
@@ -95,7 +95,7 @@ function delete_cart($id_product)
     if (isset($_SESSION['cart'])) {
         if (array_key_exists($id_product, $_SESSION['cart']['buy'])) {
             unset($_SESSION['cart']['buy'][$id_product]);
-            return true;
+            update_info_cart();
         }
 
     }
@@ -110,3 +110,11 @@ function delete_all_cart()
 }
 
 
+function update_cart($qty): void
+{
+    foreach ($qty as $key => $new_qty) {
+        $qty = $_SESSION['cart']['buy'][$key]['quantity'] = $new_qty;
+        $_SESSION['cart']['buy'][$key]['total'] = $new_qty * $_SESSION['cart']['buy'][$key]['price'];
+    }
+    update_info_cart();
+}

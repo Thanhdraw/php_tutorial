@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="js/jQuery-3.7.1.js"></script>
+    <title>Learning about ajax</title>
+  </head>
+  <body>
+    <div id="content"></div>
+    <button type="button" id="btn" onclick="loadContent()">Load Content</button>
+    <div id="send">
+      <p class="content-send">you has sent data by aJax</p>
+      <button id="sendButton" type="button">Send Data</button>
+    </div>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+    $("#btn").click(function () {
+      $.ajax({
+        url: "content.txt",
+        method: "GET",
+        dataType: "text",
+        success: function (response) {
+          $("#content").html(response);
+        },
+        error: function (xhr, status, error) {
+          console.log("Erorr: " + error);
+        },
+      });
+    });
+    $("#sendButton").click(function () {
+      let data_txt = $(".content-send").text();
+      // let data = { data_txt: data_txt };
+      $.ajax({
+        url: "server.php",
+        method: "POST",
+        dataType: "Text",
+        data: { data_txt: data_txt },
+        success: function (response) {
+          alert("Success sent" + response);
+        },
+        error: function (xhr, error, status) {
+          console.log("Erorr:" + error);
+        },
+      });
+    });
+  });
+</script>

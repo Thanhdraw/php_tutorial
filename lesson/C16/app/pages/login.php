@@ -43,7 +43,7 @@ if (isset($_POST["submit"])) {
             $error["account"] = "Username or Password is not correct";
         }
 
-//        $path = "./index.php";
+//        $path = "./main.php";
 //        header("location: $path");
     }
 }

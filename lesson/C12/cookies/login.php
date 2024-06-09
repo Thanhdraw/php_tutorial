@@ -55,7 +55,7 @@ if (isset($_POST["btn_submit"])) {
             }
             $_SESSION["is_login"] = true;
             $_SESSION["user_login"] = "unitop";
-            header("Location:index.php");
+            header("Location:main.php");
         } else {
             echo "Thong tin khong ton tai";
         }

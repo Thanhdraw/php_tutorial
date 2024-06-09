@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e055c35c-ff4a-4ade-971b-df414058ea7c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../C18/shopping/modules/cart/checkout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C18/shopping/modules/cart/send_mail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C23/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C23/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C23/js/jquery-3.7.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C23/process.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/ex-23.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../config/db_connect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../config/db_require.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/function.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/function_data.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/layout/404.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/layout/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/layout/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/layout/sidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../modules/cart/main.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../modules/home/detail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../modules/home/main.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/bootstrap/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/bootstrap/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/bootstrap/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/font-awesome/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/import/cart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/import/category_product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/import/checkout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/import/detail_news.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/import/detail_product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/import/fonts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/import/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/import/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/import/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/import/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/css/import/thank.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/fonts/Roboto-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/fonts/Roboto-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/fonts/Roboto-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/fonts/Roboto-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/fonts/Roboto-LightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/fonts/Roboto-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/fonts/Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/fonts/Roboto-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/images/icon-cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/images/img-product.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/js/bootstrap/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/js/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/js/bootstrap/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/js/jquery-2.2.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../public/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/theme.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/category_product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/checkout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/detail_news.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/detail_product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/thank.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/import/cart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/import/category_product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/import/checkout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/import/detail_news.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/import/detail_product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/import/fonts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/import/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/import/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/import/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/import/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/import/thank.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Roboto-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Roboto-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Roboto-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Roboto-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Roboto-LightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Roboto-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Roboto-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icon-cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/img-product.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/bootstrap/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/bootstrap/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery-2.2.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/Unitop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/Unitop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../exercise/C12/reddict_file/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../exercise/C12/reddict_file/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C12/cookies/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../C12/cookies/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C12/reddict_file/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../C12/reddict_file/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C12/session/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../C12/session/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C16/app/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../C16/app/pages/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C18/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../C18/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C18/shopping/lib/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../C18/shopping/lib/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C18/shopping/lib/show_arr.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../C18/shopping/lib/show_arr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C18/shopping/modules/cart/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../C18/shopping/modules/cart/show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C18/shopping/modules/cart/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../C18/shopping/modules/cart/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C18/shopping/public/css/import/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../C18/shopping/public/css/import/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../seftCode/check_file.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../seftCode/check_file.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../selfEx/upload/lib/check_file.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../selfEx/upload/lib/check_file.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../plugin/ckfinder/core/connector/php/vendor/symfony/http-foundation/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../plugin/ckfinder/core/connector/php/vendor/symfony/http-foundation/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../plugin/ckfinder/core/connector/php/vendor/symfony/http-foundation/ServerBag.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../plugin/ckfinder/core/connector/php/vendor/symfony/http-foundation/ServerBag.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2hPppiaPK9JXWQUUbbZjN1zpUEX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Unitop/lesson/ex-23/theme&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PS-241.14494.237" />
+        <option value="bundled-php-predefined-ba97393d7c68-8f0632a2a215-com.jetbrains.php.sharedIndexes-PS-241.14494.237" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e055c35c-ff4a-4ade-971b-df414058ea7c" name="Changes" comment="" />
+      <created>1717505752124</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717505752124</updated>
+      <workItem from="1717505753190" duration="777000" />
+      <workItem from="1717506618062" duration="309000" />
+      <workItem from="1717507240358" duration="1258000" />
+      <workItem from="1717512902130" duration="110000" />
+      <workItem from="1717513063867" duration="1101000" />
+      <workItem from="1717514536937" duration="378000" />
+      <workItem from="1717514957484" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

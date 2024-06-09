@@ -50,7 +50,7 @@ if (isset($_POST["btn_submit"])) {
         if (($username == $data["username"]) && ($password == $data["password"])) {
             $_SESSION["is_login"] = true;
             $_SESSION["user_login"] = "unitop";
-            header("Location:index.php");
+            header("Location:main.php");
         } else {
             echo "Thong tin khong ton tai";
         }

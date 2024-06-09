@@ -47,7 +47,7 @@ if (isset($_POST["btn_submit"])) {
             "password" => "Admin@123",
         );
         if (($username == $data["username"]) && ($password == $data["password"])) {
-            redirect_to("index.php");
+            redirect_to("main.php");
         } else {
             echo "Thong tin khong ton tai";
         }
