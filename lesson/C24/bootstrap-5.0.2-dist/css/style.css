@@ -1,0 +1,25 @@
+@import "bootstrap-grid.css";
+@import "bootstrap-reboot.css";
+@import "bootstrap.css";
+@import "bootstrap-utilities.css";
+@import "bootstrap.rtl.css";
+
+
+#login_form {
+    max-width: 800px;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-check-input[type=checkbox] {
+    float: left;
+}
+
+#sign_up {
+
+    float: right;
+}
