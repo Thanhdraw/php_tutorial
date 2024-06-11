@@ -2,8 +2,10 @@
 
 require 'config/db_connect.php';
 require "config/url.php";
+require "config/function.php";
+require "config/process_login.php";
 global $PDO;
-
+get_header();
 
 ?>
 
@@ -21,5 +23,9 @@ if (file_exists($path)) {
     echo 'Không tìm thấy file';
 }
 
+?>
 
+<?php
+
+get_footer(); ?>
 
