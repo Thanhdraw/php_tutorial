@@ -5,8 +5,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $validation = regex($email, $password);
-    if ($validation['error'] == true) {
-        print_r($validation['message']);
+    if ($validation['error'] === true) {
         // Register the user
         if (register($validation['email'], $validation['password'])) {
             $message = "Đăng ký thành công";
