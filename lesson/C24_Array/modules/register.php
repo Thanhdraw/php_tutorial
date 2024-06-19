@@ -1,21 +1,22 @@
 <?php
-require "config/process_regis.php";
+$config = HTMLPurifier_Config::createDefault();
+$purifier = new HTMLPurifier($config);
 
-if (isset($_POST['submit'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $validation = regex($email, $password);
-    if ($validation['error'] === true) {
-        // Register the user
-        if (register($validation['email'], $validation['password'])) {
-            $message = "Đăng ký thành công";
-        } else {
-            // Log the error
-            $message = "Đăng ký thất bại. Vui lòng thử lại.";
-        }
-    } else {
-        $message = $validation['message'];
+$message = '';
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    global $purifier;
+    $email = $purifier->purify($_POST['email']);
+    $password = $purifier->purify($_POST['password']);
+
+    $message = check($email, $password);
+    if ($message === true) {
+        $message_register = register($email, $password);
     }
+
+
 }
 
 
@@ -25,11 +26,14 @@ if (isset($_POST['submit'])) {
 
     <h1 class="text-center">Sign up</h1>
     <div id="mess_data" class="text-center">
-        <p onclick="clearMessage()"><?php if (isset($message)) echo($message); ?></p>
+        <p onclick="clearMessage()"><?php if (isset($message_register)) echo($message_register); ?>
+            <span id="countdown"
+                  class="text-center">(5)</span>
+        </p>
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 
     </div>
@@ -43,7 +47,7 @@ if (isset($_POST['submit'])) {
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
-    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
     <div class="text-center">
         <label for="login">Trở về trang đăng nhập: <a href="?">Login</a></label>
     </div>
@@ -54,5 +58,27 @@ if (isset($_POST['submit'])) {
     import * from "bootstrap-5.0.2-dist/js/scripts.js";
 </script>
 <script>
+    function clearMessage() {
+        let countdownElement = document.getElementById('countdown');
+        let messDataElement = document.getElementById('mess_data');
+        let countdown = 5; // thời gian countdown tính bằng giây
 
+        let interval = setInterval(function () {
+            countdown--;
+
+            countdownElement.innerHTML = `(${countdown})`;
+
+            if (countdown <= 0) {
+                clearInterval(interval);
+                messDataElement.innerHTML = '';
+            }
+        }, 1000);
+    }
+
+    // Chỉ chạy clearMessage nếu có thông báo
+    document.addEventListener("DOMContentLoaded", function () {
+        if (document.getElementById('mess_data').innerText.trim() !== '') {
+            clearMessage();
+        }
+    });
 </script>
