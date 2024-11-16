@@ -1,0 +1,12 @@
+{
+  "name": "mvc",
+  "version": "1.0.0",
+  "description": "/myapp\r │\r ├── /app\r │   ├── /controllers\r │   │   └── HomeController.php\r │   │   └── ProductController.php\r │   │\r │   ├── /models\r │   │   └── Product.php\r │   │\r │   └── /views\r │       └── home.php\r │       └── product.php\r │\r │\r ├── /config\r │   └── config.php\r │\r ├── /core\r │   └── App.php\r │   └── Controller.php\r │   └── Model.php\r │   └── View.php\r │\r ├── /public\r │   ├── /css\r │   │   └── style.css\r │   ├── /js\r │   │   └── script.js\r │   └── index.php\r │\r ├── /routes\r │   └── web.php\r │\r └── /storage\r     └── /logs\r         └── error.log",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
