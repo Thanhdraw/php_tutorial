@@ -12,6 +12,7 @@ if (($_SERVER['REQUEST_METHOD'] === 'POST') && isset($_POST['email'], $_POST['pa
 
     $user = new User($email, $password);
     $user->info();
+//    $user->createTable('users');
     if (($user->isEmailExists('users', $email))) {
         $message['error'] = '❗Email đã tồn tại, vui lý nhập email khác';
     } else if ($user->insert('users')) {

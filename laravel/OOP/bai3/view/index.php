@@ -1,8 +1,8 @@
 <?php
 // Đặt ở đầu file PHP
+ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
 require_once __DIR__ . '/../config/db.php';
 require_once __DIR__ . '/../model/User.php';
 
@@ -13,6 +13,15 @@ if (($_SERVER['REQUEST_METHOD'] === 'POST') && isset($_POST['email'], $_POST['pa
 
     $user = new User($email, $password);
     $user->info();
+//    lấy kết quả truy vấn
+    $result = $user->get('users',
+        ['id', 'email', 'password', 'created_at'],
+        ['email' => $email, 'password' => $password]);
+    $result = $user->update('users',
+        ['id', 'email', 'password', 'created_at'],
+        ['email' => $email, 'password' => $password]);
+
+
     if ($user->isEmailExists('users', $email)) {
         $message['success'] = '✅ Đăng nhập thành công';
     } else if ($user->insert('users')) {

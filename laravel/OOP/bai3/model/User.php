@@ -26,6 +26,7 @@ class User
      */
     public function getPassword(): string
     {
+
         return $this->password;
     }
 
@@ -69,19 +70,76 @@ class User
         $whereClause = "";
         $params = [];
 
+        // Tạo câu điều kiện WHERE nếu mảng where không rỗng
         if (!empty($where)) {
             $whereClause = " WHERE ";
             $conditions = [];
             foreach ($where as $key => $value) {
                 $conditions[] = "$key = :$key";
                 $params[":$key"] = $value;
+
             }
+            print_r($params);
             $whereClause .= implode(" AND ", $conditions);
+
         }
 
+        // Tạo câu truy vấn SQL
         $sql = "SELECT $fields FROM $table $whereClause";
+
         $stmt = self::$pdo->prepare($sql);
+        echo '<pre>';
+        echo $stmt->queryString;
+        echo '</pre>';
         $stmt->execute($params);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        echo 'lenh truy van';
+        echo "<pre>";
+        print_r($result);
+        echo "</pre>";
+
+        // Lấy kết quả truy vấn
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+//    update du liệu trong php sql ???
+    public function update($table, $fields = [], $where=[]): array|false
+    {
+        $fields = !empty($fields) ? implode(", ", $fields) : "*";
+        $whereClause = "";
+        $params = [];
+
+        // Tạo câu điều kiện WHERE nếu mảng where không rỗng
+        if (!empty($where)) {
+            $whereClause = " WHERE ";
+            $conditions = [];
+            foreach ($where as $key => $value) {
+                $conditions[] = "$key = :$key";
+                $params[":$key"] = $value;
+
+            }
+            print_r($params);
+            $whereClause .= implode(" AND ", $conditions);
+
+        }
+
+        // Tạo câu truy vấn SQL
+        $sql = "UPDATE $table SET $fields $whereClause";
+
+        $stmt = self::$pdo->prepare($sql);
+        echo '<pre>';
+        echo $stmt->queryString;
+        echo '</pre>';
+//        $stmt->execute($params);
+//        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//
+//        echo 'lenh truy van';
+//        echo "<pre>";
+//        print_r($result);
+//        echo "</pre>";
+//
+//        // Lấy kết quả truy vấn
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
