@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CatCotroller;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,10 @@ Route::get('/add-product', [PageController::class, 'addProduct']);
 
 Route::get('/contact', [PageController::class, 'contact']);
 Route::get('/about', [PageController::class, 'about']);
+
+
+Route::prefix('category')->group(function () {
+    Route::get('/', [CatCotroller::class, 'dumpData'])->name('category.index');
+    Route::get('/{id?}', [CatCotroller::class, 'findbyid'])->name('category.edit');
+    
+});

@@ -3,11 +3,10 @@
         <h2 class="text-xl font-bold">Sidebar</h2>
         <nav>
             <ul class="space-y-2">
-                <li><a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Overview</a></li>
+                <li><a href="/category" class="block px-4 py-2 rounded hover:bg-gray-700">Categories</a></li>
                 <li><a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Orders</a></li>
                 <li><a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Products</a></li>
                 <li><a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Customers</a></li>
-                <li><a href="#" class="block px-4 py-2 rounded hover:bg-gray-700">Reports</a></li>
             </ul>
         </nav>
     </div>
