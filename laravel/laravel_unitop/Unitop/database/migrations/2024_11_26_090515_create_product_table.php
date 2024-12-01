@@ -13,17 +13,17 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->id(); // Khóa chính tự động tăng
-            $table->string('name', 50);
-            $table->text('content');
-            $table->string('img')->nullable();
-            $table->decimal('price', 8, 2)->nullable();
-            $table->unsignedBigInteger('cat_id');
-            $table->foreign('cat_id')
-                ->references('id')->on('cat')->onDelete('cascade');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('products')) {
+            Schema::create('products', function (Blueprint $table) {
+                $table->id();
+                $table->string('name', 50);
+                $table->text('content');
+                $table->string('img', 255)->nullable();
+                $table->decimal('price', 8, 2)->nullable();
+                $table->unsignedBigInteger('cat_id');
+                $table->timestamps();
+            });
+        }
     }
 
 

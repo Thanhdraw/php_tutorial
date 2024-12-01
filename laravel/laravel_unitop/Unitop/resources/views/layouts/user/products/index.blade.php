@@ -23,6 +23,7 @@
             @foreach ($products as $product)
                 <div
                     class="overflow-hidden transition-all duration-300 transform bg-white shadow-lg rounded-xl hover:scale-105 hover:shadow-xl">
+
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-sm text-gray-500">ID: {{ $product->id }}</span>
@@ -44,6 +45,7 @@
                         </div>
                     </div>
                 </div>
+
             @endforeach
         </div>
 
