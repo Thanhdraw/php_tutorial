@@ -26,108 +26,26 @@ class PageController extends Controller
     }
     public function products()
     {
-        $products = [
-            [
-                'id' => 1,
-                'name' => 'iPhone 14',
-                'content' => 'Điện thoại iPhone 14 với màn hình OLED 6.1 inch, chip A15 Bionic',
-                'img' => 'iphone14.jpg',
-                'price' => 999.99,
-                'cat_id' => 1,
-            ],
-            [
-                'id' => 2,
-                'name' => 'Samsung Galaxy S23',
-                'content' => 'Điện thoại Samsung Galaxy S23, màn hình 6.1 inch, Snapdragon 8 Gen 2',
-                'img' => 'samsung_s23.jpg',
-                'price' => 899.99,
-                'cat_id' => 1,
-            ],
-            [
-                'id' => 3,
-                'name' => 'MacBook Air M2',
-                'content' => 'Laptop MacBook Air M2, màn hình Retina 13.6 inch, chip Apple M2',
-                'img' => 'macbook_air_m2.jpg',
-                'price' => 1299.00,
-                'cat_id' => 2,
-            ],
-            [
-                'id' => 4,
-                'name' => 'Dell XPS 13',
-                'content' => 'Laptop Dell XPS 13 với màn hình 13.4 inch, Intel Core i7',
-                'img' => 'dell_xps_13.jpg',
-                'price' => 1399.00,
-                'cat_id' => 2,
-            ],
-            [
-                'id' => 5,
-                'name' => 'iPad Pro 11',
-                'content' => 'Máy tính bảng iPad Pro 11 inch, chip M2, màn hình Liquid Retina',
-                'img' => 'ipad_pro_11.jpg',
-                'price' => 799.00,
-                'cat_id' => 3,
-            ],
-            [
-                'id' => 6,
-                'name' => 'Samsung Galaxy Tab S8',
-                'content' => 'Máy tính bảng Samsung Galaxy Tab S8, màn hình 11 inch, Snapdragon 8 Gen 1',
-                'img' => 'galaxy_tab_s8.jpg',
-                'price' => 749.99,
-                'cat_id' => 3,
-            ],
-            [
-                'id' => 7,
-                'name' => 'Apple Watch Series 8',
-                'content' => 'Đồng hồ thông minh Apple Watch Series 8 với màn hình luôn sáng, cảm biến đo oxy trong máu',
-                'img' => 'apple_watch_8.jpg',
-                'price' => 399.00,
-                'cat_id' => 4,
-            ],
-            [
-                'id' => 8,
-                'name' => 'Samsung Galaxy Watch 6',
-                'content' => 'Đồng hồ thông minh Samsung Galaxy Watch 6, theo dõi sức khỏe, GPS',
-                'img' => 'galaxy_watch_6.jpg',
-                'price' => 329.99,
-                'cat_id' => 4,
-            ],
-            [
-                'id' => 9,
-                'name' => 'OnePlus 11',
-                'content' => 'Điện thoại OnePlus 11, màn hình 6.7 inch, Snapdragon 8 Gen 2',
-                'img' => 'oneplus_11.jpg',
-                'price' => 749.00,
-                'cat_id' => 1,
-            ],
-            [
-                'id' => 10,
-                'name' => 'Lenovo ThinkPad X1 Carbon',
-                'content' => 'Laptop Lenovo ThinkPad X1 Carbon, màn hình 14 inch, Intel Core i7',
-                'img' => 'thinkpad_x1.jpg',
-                'price' => 1599.00,
-                'cat_id' => 2,
-            ]
-        ];
-        $dbProducts = DB::table('products')->get()->toArray(); // Convert Collection to array
 
-        // Kết hợp mảng sản phẩm tĩnh với sản phẩm từ cơ sở dữ liệu
-        
+        // $dbProducts = DB::table('products')->get()->toArray(); // Convert Collection to array
 
-        // Trả về view với dữ liệu sản phẩm
-        return view('layouts.user.products.index', ['products' => $dbProducts]);
+
+
+        // // Trả về view với dữ liệu sản phẩm
+        // return view('layouts.user.products.index', ['products' => $dbProducts]);
     }
 
     public function addProduct()
     {
-        DB::table('products')->insert([
-            'name' => 'OnePlus 17',
-            'content' => 'Điện thoại OnePlus 11, màn hình 10 inch, Snapdragon 8 Gen 4',
-            'img' => 'oneplus_11.jpg',
-            'price' => 949.00,
-            'cat_id' => 1,
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
-        return redirect()->route('products')->with('success', 'Product added successfully');
+        // DB::table('products')->insert([
+        //     'name' => 'OnePlus 17',
+        //     'content' => 'Điện thoại OnePlus 11, màn hình 10 inch, Snapdragon 8 Gen 4',
+        //     'img' => 'data:image/jpeg;base64,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',
+        //     'price' => 949.00,
+        //     'cat_id' => 1,
+        //     'created_at' => now(),
+        //     'updated_at' => now()
+        // ]);
+        // return redirect()->route('products')->with('success', 'Product added successfully');
     }
 }
