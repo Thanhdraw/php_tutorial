@@ -16,6 +16,12 @@ class Category extends Model
         'deleted_at',
     ];
 
+    public function Product(){
+        return $this->hasMany(Product::class,'cat_id','id');
+    }
+    
+
+
 
 
 }

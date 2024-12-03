@@ -11,7 +11,8 @@ class Post extends Model
 
     protected $fillable = ['title', 'content'];
 
-
-
-
+    public function postImg()
+    {
+        return  $this->hasOne(post_img::class, 'post_id', 'id');
+    }
 }

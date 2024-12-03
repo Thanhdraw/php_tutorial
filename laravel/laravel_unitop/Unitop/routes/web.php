@@ -41,14 +41,14 @@ Route::get('/trashcan/trashed', [CatCotroller::class, 'trashed'])->name('categor
 
 
 // Route::get('/post', function () {
-//     $post = post_img::find(2)->post; // Lấy bài viết từ hình ảnh
-//     $images = Post::find(2)->post_img; // Lấy danh sách ảnh từ bài viết
+//     $post = post_img::find(1)->post; // Lấy bài viết từ hình ảnh
+//     $images = Post::find(1)->postImg; // Lấy danh sách ảnh từ bài viết
 //     return [$post, $images];
 // });
 
-// Route::get('/post', function () {
-//     $cat = Category::find(1)->product;
-//     $product = Product::find(1)->cat;
-//     return [$cat, $product];
-// });
+Route::get('/post', function () {
+    $cat = Category::find(1)->Product;
+    $product = Product::find(1)->Category;
+    return [$cat, $product];
+});
 
