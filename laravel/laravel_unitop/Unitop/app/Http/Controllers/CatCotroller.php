@@ -1,17 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Log;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CatCotroller extends Controller
 {
     //
-    public function index()
-    {
-        ;
-    }
     public function dumpData()
     {
         $cat = Category::all();
@@ -54,15 +50,20 @@ class CatCotroller extends Controller
     }
     public function trashed()
     {
-        $categories = Category::withTrashed()->get(); // Đổi $cat thành $categories
+        // Lấy dữ liệu bị xóa mềm
+        $categories = Category::onlyTrashed()->get();
 
-        // Kiểm tra xem có dữ liệu không
-        if ($categories->isEmpty()) {
-            return redirect()->route('category.index')->with('error', 'No trashed categories found.');
-        }
+        // Ghi log dữ liệu để kiểm tra
+        Log::info('Categories: ' . $categories->toJson());
 
-        return view('layout.user.category.trashed', compact('categories')); // Truyền đúng biến
+        // Kiểm tra nếu không có dữ liệu
+
+
+        // Trả về view với dữ liệu
+        return view('layouts.user.category.trashed', compact('categories'));
     }
+
+
 
 
     public function restore($id)
@@ -79,5 +80,41 @@ class CatCotroller extends Controller
             return redirect()->route('category.index')->with('error', 'Có lỗi xảy ra khi khôi phục: ' . $th->getMessage());
         }
     }
+
+
+    public function forceDelete($id)
+    {
+        try {
+            $cat = Category::withTrashed()->find($id);
+            if (!$cat) {
+                return redirect()->route('category.index')->with('error', 'Danh mục không tồn tại hoặc chưa bị xóa.');
+            }
+            $cat->forceDelete();
+            return redirect()->route('category.index')->with('success', 'Xóa thành cong');
+        } catch (\Throwable $th) {
+            return redirect()->route('category.index')->with('error', 'Có lỗi xảy ra khi xóa: ' . $th->getMessage());
+        }
+    }
+
+    public function addCategory()
+    {
+        return view('layouts.user.category.create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+        // $cat = new Category();
+        // $cat->name = $request->name;
+        // $cat->save();
+        Category::create([
+            'name' => $request->name
+        ]);
+
+        return redirect()->route('category.create')->with('success', 'Them thanh cong');
+    }
+
 
 }

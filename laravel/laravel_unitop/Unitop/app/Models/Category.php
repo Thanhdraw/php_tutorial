@@ -15,4 +15,7 @@ class Category extends Model
         'name',
         'deleted_at',
     ];
+
+
+
 }

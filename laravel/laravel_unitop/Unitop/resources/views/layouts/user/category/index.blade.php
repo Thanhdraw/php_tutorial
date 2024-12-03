@@ -61,7 +61,7 @@
                 @endif
 
                 <div class="mt-6">
-                    <a href="#"
+                    <a href="{{route('category.create')}}"
                         class="block w-full px-4 py-2 font-bold text-center text-white transition duration-300 ease-in-out bg-green-500 rounded hover:bg-green-600">
                         Add New Category
                     </a>

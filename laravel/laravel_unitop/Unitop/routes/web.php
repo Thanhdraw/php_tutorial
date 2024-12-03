@@ -5,6 +5,10 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Category;
+use App\Models\Product;
+use App\Models\Post;
+use App\Models\post_img;
+
 Route::get('/admin', function () {
     return view('layouts.admin.master');
 });
@@ -27,9 +31,24 @@ Route::prefix('category')->group(function () {
     Route::put('/{id}', [CatCotroller::class, 'update'])->name('category.update');
     Route::delete('/{id}', [CatCotroller::class, 'delete'])->name('category.delete');
 
-    Route::get('/trashed', [CatCotroller::class, 'trashed'])->name('category.trashed');
-
     Route::get('/{id}/restore', [CatCotroller::class, 'restore'])->name('category.restore');
-});
+    Route::get('/{id}/forcedelete', [CatCotroller::class, 'forceDelete'])->name('category.forcedelete');
+    Route::get('/addCategory/create', [CatCotroller::class, 'addCategory'])->name('category.create');
+    Route::post('/create/store', [CatCotroller::class, 'store'])->name('category.store');
 
+});
+Route::get('/trashcan/trashed', [CatCotroller::class, 'trashed'])->name('category.trashed');
+
+
+// Route::get('/post', function () {
+//     $post = post_img::find(2)->post; // Lấy bài viết từ hình ảnh
+//     $images = Post::find(2)->post_img; // Lấy danh sách ảnh từ bài viết
+//     return [$post, $images];
+// });
+
+// Route::get('/post', function () {
+//     $cat = Category::find(1)->product;
+//     $product = Product::find(1)->cat;
+//     return [$cat, $product];
+// });
 
