@@ -3,11 +3,16 @@
 use App\Http\Controllers\CatCotroller;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\QBCOntroller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Post;
 use App\Models\post_img;
+use App\Models\Role;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/admin', function () {
     return view('layouts.admin.master');
@@ -51,4 +56,31 @@ Route::get('/post', function () {
     $product = Product::find(1)->Category;
     return [$cat, $product];
 });
+
+
+Route::get('/manytomany', function () {
+    $user = User::all()->first();
+    $roles = User::find(6)->Role;
+    return [$user, $roles];
+});
+
+
+Route::prefix('QB')->group(function () {
+    Route::get('/', [QBCOntroller::class, 'index']);
+    Route::get('/add', [QBCOntroller::class, 'add']);
+    Route::get('/find/{id}', [QBCOntroller::class, 'findbyid']);
+    Route::get('/join', [QBCOntroller::class, 'groupby']);
+    Route::get('/orderBy', [QBCOntroller::class, 'orderBy']);
+    Route::get('/update/{id?}', [QBCOntroller::class, 'update']);
+    Route::get('/update/{id?}', [QBCOntroller::class, 'delete']);
+});
+
+Route::prefix('auth')->group(function () {
+    Route::get('/login', [AuthController::class, 'login'])->name('auth.login');
+    Route::get('/register', [AuthController::class, 'register'])->name(name: 'register');
+    Route::post('/register', [AuthController::class, 'regis'])->name(name: 'regis');
+    Route::post('/login', [AuthController::class, 'log'])->name(name: 'log');
+});
+
+
 

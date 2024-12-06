@@ -45,4 +45,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function Role()
+    {
+        return $this->belongsToMany(Role::class, 'role_user', foreignPivotKey: 'user_id', relatedPivotKey: 'role_id');
+    }
 }
