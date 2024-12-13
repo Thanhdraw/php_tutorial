@@ -99,4 +99,47 @@ class QBCOntroller extends Controller
     //     print_r($user);
     //     echo '</pre>';
     // }
+
+    public function show()
+    {
+        $products = DB::table('products')->get();
+        return $products;
+    }
+    public function create()
+    {
+        $products = DB::table('products')->insert([
+            'name' => 'Laptop',
+            'content' => 'Laptop Apple 2020',
+            'img' => 'Laptop.jpg',
+            'price' => 2000,
+            'cat_id' => 2,
+            'created_at' => now(),
+        ]);
+        if ($products) {
+            echo 'Them thanh cong';
+        } else {
+            echo 'Them that bai';
+        }
+    }
+    public function updateQB($id)
+    {
+        $products = DB::table('products')->where('id', $id)->update([
+            'name' => 'Laptop Apple 2021',
+            'content' => 'Laptop Apple 2021',
+        ]);
+        if ($products) {
+            echo 'Them thanh cong';
+        } else {
+            echo 'Them that bai';
+        }
+    }
+    public function deleteQB($id)
+    {
+        $products = DB::table('products')->where('id', $id)->delete();
+        if ($products) {
+            echo 'xoa thanh cong';
+        } else {
+            echo 'xoa that bai';
+        }
+    }
 }

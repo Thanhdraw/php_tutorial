@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\QBCOntroller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Post;
@@ -13,15 +14,16 @@ use App\Models\post_img;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\FormController;
 
 Route::get('/admin', function () {
     return view('layouts.admin.master');
-});
+})->name('admin');
 
 
 Route::get('/', function () {
     return view('layouts.user.master');
-});
+})->name('home');
 
 Route::get('/products', [ProductController::class, 'products'])->name('products');
 Route::get('/add-product', [ProductController::class, 'addProduct']);
@@ -51,18 +53,18 @@ Route::get('/trashcan/trashed', [CatCotroller::class, 'trashed'])->name('categor
 //     return [$post, $images];
 // });
 
-Route::get('/post', function () {
-    $cat = Category::find(1)->Product;
-    $product = Product::find(1)->Category;
-    return [$cat, $product];
-});
+// Route::get('/post', function () {
+//     $cat = Category::find(1)->Product;
+//     $product = Product::find(1)->Category;
+//     return [$cat, $product];
+// });
 
 
-Route::get('/manytomany', function () {
-    $user = User::all()->first();
-    $roles = User::find(6)->Role;
-    return [$user, $roles];
-});
+// Route::get('/manytomany', function () {
+//     $user = User::all()->first();
+//     $roles = User::find(6)->Role;
+//     return [$user, $roles];
+// });
 
 
 Route::prefix('QB')->group(function () {
@@ -73,6 +75,10 @@ Route::prefix('QB')->group(function () {
     Route::get('/orderBy', [QBCOntroller::class, 'orderBy']);
     Route::get('/update/{id?}', [QBCOntroller::class, 'update']);
     Route::get('/update/{id?}', [QBCOntroller::class, 'delete']);
+    Route::get('/bt', [QBCOntroller::class, 'show']);
+    Route::get('/create', [QBCOntroller::class, 'create']);
+    Route::get('/updateQB/{id?}', [QBCOntroller::class, 'updateQB']);
+    Route::get('/deleteQB/{id?}', [QBCOntroller::class, 'deleteQB']);
 });
 
 Route::prefix('auth')->group(function () {
@@ -83,4 +89,14 @@ Route::prefix('auth')->group(function () {
 });
 
 
+// Route::get('/phanquyen', [AuthController::class, 'phanquyen']);
 
+
+
+Route::prefix('form')->group(function () {
+    Route::get('/', [FormController::class, 'index'])->name('form.index');
+    Route::get('/reg', [FormController::class, 'reg'])->name('form.reg');
+
+    Route::post('/json', [FormController::class, 'handleJson'])->name('form.json');
+    Route::post('/store', [FormController::class, 'store'])->name('post.store');
+});
