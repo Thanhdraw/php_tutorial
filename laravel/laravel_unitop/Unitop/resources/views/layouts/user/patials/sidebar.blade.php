@@ -134,8 +134,48 @@
             </div>
 
 
+            <!-- Email send -->
+            <div x-data="{ open: false }" class="relative">
+                <button @click="open = !open"
+                    class="flex items-center justify-between w-full px-3 py-2 text-left rounded hover:bg-gray-700">
+                    Email send
+                    <svg x-show="!open" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg x-show="open" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
 
+                <div x-show="open" class="pl-4 mt-2 space-y-2">
+                    <p></p>
+                    <a href="{{route('email.send')}}" class="block px-3 py-2 rounded hover:bg-gray-700">Email send</a>
 
+                </div>
+            </div>
+            <!-- Editor quill -->
+            <div x-data="{ open: false }" class="relative">
+                <button @click="open = !open"
+                    class="flex items-center justify-between w-full px-3 py-2 text-left rounded hover:bg-gray-700">
+                    Editor quill
+                    <svg x-show="!open" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg x-show="open" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <div x-show="open" class="pl-4 mt-2 space-y-2">
+                    <p></p>
+                    <a href="/editors" class="block px-3 py-2 rounded hover:bg-gray-700">Editor</a>
+
+                </div>
+            </div>
             <!-- Single menu item -->
             <a href="/" class="block px-3 py-2 rounded hover:bg-gray-700">Trang chủ</a>
             <a href="{{route('admin')}}" class="block px-3 py-2 rounded hover:bg-gray-700">Admin Dashboard</a>

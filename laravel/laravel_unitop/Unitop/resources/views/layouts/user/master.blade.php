@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'E-Commerce')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Thêm CSS của Quill -->
+    <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.3.7/quill.bubble.css" rel="stylesheet">
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- Thêm JavaScript của Quill -->
+    <script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
+
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/quill.js'])
 </head>
 
 <body class="text-gray-800 bg-gray-100">

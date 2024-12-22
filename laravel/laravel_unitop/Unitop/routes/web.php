@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\QBCOntroller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SendEmailController;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
@@ -15,6 +16,7 @@ use App\Models\Role;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\QuillEditorController;
 
 Route::get('/admin', function () {
     return view('layouts.admin.master');
@@ -100,3 +102,14 @@ Route::prefix('form')->group(function () {
     Route::post('/json', [FormController::class, 'handleJson'])->name('form.json');
     Route::post('/store', [FormController::class, 'store'])->name('post.store');
 });
+
+
+Route::prefix('email')->group(function () {
+    Route::get('/', [SendEmailController::class, 'sendEmail'])->name('email.send');
+});
+
+Route::get('/editors', function () {
+    return view('layouts.user.editors.index');
+});
+
+Route::post('/editors', [QuillEditorController::class, 'store'])->name('quill.store');
