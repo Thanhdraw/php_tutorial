@@ -159,7 +159,7 @@
             <div x-data="{ open: false }" class="relative">
                 <button @click="open = !open"
                     class="flex items-center justify-between w-full px-3 py-2 text-left rounded hover:bg-gray-700">
-                    Editor quill
+                    Editor quill - Chưa học xong
                     <svg x-show="!open" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -173,6 +173,28 @@
                 <div x-show="open" class="pl-4 mt-2 space-y-2">
                     <p></p>
                     <a href="/editors" class="block px-3 py-2 rounded hover:bg-gray-700">Editor</a>
+
+                </div>
+            </div>
+            <!-- Shopping cart -->
+            <div x-data="{ open: false }" class="relative">
+                <button @click="open = !open"
+                    class="flex items-center justify-between w-full px-3 py-2 text-left rounded hover:bg-gray-700">
+                    <tr>Shopping cart</tr>
+                    <svg x-show="!open" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg x-show="open" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <div x-show="open" class="pl-4 mt-2 space-y-2">
+                    <a href="{{route('cart.products')}}" class="block px-3 py-2 rounded hover:bg-gray-700">Products</a>
+
+                    <a href="{{route('addToCart')}}" class="block px-3 py-2 rounded hover:bg-gray-700">ShopingCart</a>
 
                 </div>
             </div>

@@ -7,6 +7,7 @@ use App\Http\Controllers\QBCOntroller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SendEmailController;
+use App\Http\Controllers\CartController;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
@@ -113,3 +114,15 @@ Route::get('/editors', function () {
 });
 
 Route::post('/editors', [QuillEditorController::class, 'store'])->name('quill.store');
+
+
+
+Route::prefix('/cart')->group(function () {
+    Route::get('/', [CartController::class, 'index'])->name('addToCart');
+    Route::get('/products', [CartController::class, 'products'])->name('cart.products');
+    Route::get('/add/{id}', [CartController::class, 'addToCart'])->name('addCart');
+    Route::get('/destroy/{id}', [CartController::class, 'destroy'])->name('cart.destroy');
+    Route::delete('/destroyAll', [CartController::class, 'destroyAll'])->name('cart.destroyAll');
+    Route::put('/cart/update', [CartController::class, 'update'])->name('cart.update');
+
+});
